@@ -71,3 +71,22 @@ body {
 	bottom: -10px;
 	right: -10px;
 }
+
+.contact__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+}
+
+.contact__list--item {
+	margin-right: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact__list--item a {
+	margin-top: 0.5rem;
+}
