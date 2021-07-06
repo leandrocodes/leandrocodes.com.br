@@ -19,7 +19,27 @@ body {
 	align-items: center;
 	flex-wrap: wrap;
 
-	margin: 0 10rem;
+	margin: 0;
+}
+
+@media screen and (min-width: 1600px) {
+	.header {
+		margin: 0 10rem;
+	}
+}
+
+.header > .header__greetings {
+	flex: 1;
+}
+
+.header > .header__greetings h2 {
+	font-weight: normal;
+	display: flex;
+	align-items: center;
+}
+
+.header > .header__greetings h2 img {
+	margin-left: 0.5rem;
 }
 
 .header > .header__greetings h1 {
@@ -37,4 +57,17 @@ body {
 .header > .header__greetings p a {
 	color: var(--link);
 	text-decoration: none;
+}
+
+.header .header__profile-pic {
+	background: linear-gradient(318.78deg, #22b5c3 30.98%, #428cd0 90.7%);
+	border-radius: 5px;
+	width: 290px;
+	height: 290px;
+	position: relative;
+}
+.header .header__profile-pic img {
+	position: absolute;
+	bottom: -10px;
+	right: -10px;
 }
