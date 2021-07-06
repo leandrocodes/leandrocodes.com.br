@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Zilla+Slab:wght@300;500;600;700&display=swap');
+
+:root {
+	--dark-bg: #353540;
+	--highlight: #90f8b5;
+	--link: #00c2ff;
+}
+
+body {
+	background-color: var(--dark-bg);
+	color: white;
+	font-family: 'Zilla Slab', serif;
+	padding: 1rem 5rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+
+	margin: 0 10rem;
+}
+
+.header > .header__greetings h1 {
+	font-weight: normal;
+}
+
+.header > .header__greetings h1 span {
+	color: var(--highlight);
+}
+
+.header > .header__greetings p span {
+	color: var(--highlight);
+}
+
+.header > .header__greetings p a {
+	color: var(--link);
+	text-decoration: none;
+}
