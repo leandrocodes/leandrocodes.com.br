@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
+
+body {
+	background-color: #f8f5f1;
+	font-family: 'Mukta', sans-serif;
+
+	background-image: url('../images/wave.svg');
+	background-size: cover contain;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+
+header {
+	color: #f8f5f1;
+	display: flex;
+	justify-content: space-around;
+}
+
+header ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	list-style: none;
+}
+
+header ul li {
+	margin-left: 1rem;
+}
+
+section.hero {
+	color: #f8f5f1;
+	margin: 0 auto;
+	text-align: center;
+}
+
+section.hero h1 {
+	margin-bottom: 0;
+}
+
+section.hero p {
+	margin-top: 0;
+	padding-bottom: 0;
+	border-bottom: 2px solid #c490e4;
+	display: inline-block;
+}
+
+.profile-pic {
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	border-radius: 50%;
+
+	position: relative;
+}
+
+.profile-pic img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 4px;
+
+	position: absolute;
+	bottom: -5px;
+	left: -5px;
+
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+section.academics h1 {
+	text-align: center;
+}
+
+section.academics {
+	margin-top: 5rem;
+	color: #1c1427;
+}
+
+section.academics .items {
+	display: flex;
+	justify-content: center;
+}
+
+section.academics .item {
+	width: 350px;
+	height: 150px;
+	padding: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+
+	/* background-color: #fff; */
+	border-radius: 4px;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+		0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+	margin: 0 3rem;
+}
+
+section.academics .item p {
+	display: flex;
+	align-items: center;
+}
+
+section.academics .item p img {
+	margin-right: 0.5rem;
+}
