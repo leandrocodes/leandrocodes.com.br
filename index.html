@@ -1,221 +1,300 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Leandro Viana - Desenvolvedor Front-end</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>leandrocodes</title>
+	<!-- Link To CSS -->
+	<link rel="stylesheet" href="style.css" />
+	<!-- Box Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
 </head>
 
-<body oncontextmenu="return false">
+<body>
+	<!-- Navbar -->
+	<header>
+		<a href="#" class="logo"><img src="img/logo.png" height="45px"> Leandro Viana</a>
 
-    <section class="hero is-white has-text-centered">
-        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="logo" href="/"><img src="img/logo.png" alt="Leandro Viana | Front-end Developer" height="65px"></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="#navMenu"><span aria-hidden="true"></span><span
-                            aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
-                <div class="navbar-menu" id="navMenu">
-                    <div class="navbar-start"></div>
-                    <div class="navbar-end">
-                        <div class="navbar-item"><a class="bt button is-primary is-outlined is-rounded" href="#about">Sobre</a></div>
-                        <div class="navbar-item"><a class="bt button is-primary is-outlined is-rounded" href="#projects">Projetos</a></div>
-                        <div class="navbar-item"><a class="bt button is-primary is-outlined is-rounded" href="#contact">Contato</a></div>
-                    </div>
-                </div>
-            </div>
+		<div class="bx bx-menu" id="menu-icon"></div>
 
-        </nav>
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-centered">
-                    <div class="column">
-                        <h1 class="title has-text-dark is-spaced is-size-2-desktop is-size-3-tablet is-size-4-mobile">
-                            Estudante de Sistemas de Informação
-                            <br> &
-                            <br> Desenvolvedor Front-end
-                        </h1>
-                        <h2 class="subtitle is-size-4-desktop">
-                            Eu desenho e codifico coisas lindamente simples, e eu amo o que faço.</h2><img class="avatar" src="img/profile.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<ul class="navbar">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="#footer">Contact</a></li>
+			<div class="bx bx-moon" id="darkmode"></div>
+		</ul>
+	</header>
+	<!-- Home -->
 
-    <section id="about" class="section is-secondary is-medium is-long">
-        <div class="container">
-            <h1 class="title has-text-centered has-text-dark is-size-3">Oi, eu sou Leandro. Prazer em te conhecer.</h1>
-            <div class="columns is-centered">
-                <div class="column is-one-fourth">
-                    <h1 class="title has-text-dark is-size-4">Sobre mim</h1>
-                    <p class="has-text-dark-gray text is-size-5">Atualmente estou cursando meu Bacharelado em Sistemas de Informação na <a href="https://cppp.ufms.br/" target="_blank" class="text has-text-dark">UFMS@CPPP</a>. No meu tempo livre sou inteiramente dedicado a aprender novas coisas legais
-                        sobre desenvolvimento web.
-                    </p>
-                </div>
-                <div class="column is-one-fourth">
-                    <h1 class="title has-text-dark is-size-4">Meu Perfil</h1>
-                    <p class="has-text-dark-gray text is-size-5">
-                        Sou um resolvedor de problemas criativo. Sempre busco o melhor e mais inteligente caminho para fazer um determinado Projeto.
-                    </p>
-                    <p class="has-text-dark-gray text is-size-5">
-                        Na Universiade eu tenho alguns projetos de desenvolvimento web e mobile. Sou extremamente focado em compartilhar meus conhecimentos para os outros colegas da faculdade.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+	<section class="home" id="home">
+		<div class="social">
+			<a href="https://www.facebook.com/leandro.vianamartins/" target="_blank"><i class="bx bxl-facebook"></i></a>
+			<a href="https://twitter.com/leandrovianam" target="_blank"><i class="bx bxl-twitter"></i></a>
+			<a href="https://www.instagram.com/leandrovianam/" target="_blank"><i class="bx bxl-instagram"></i></a>
+			<a href="https://www.linkedin.com/in/leandro-viana-45a1a9168/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+			<a href="https://github.com/leandrocodes" target="_blank"><i class="bx bxl-github"></i></a>
+		</div>
+		<div class="home-img">
+			<img src="img/profile.png" alt="" />
+		</div>
+		<div class="home-text">
+			<span>Hello, I'm</span>
+			<h1>Leandro Viana</h1>
+			<h2>Front-end Software Engineer</h2>
+			<p>mountain bike rider, video games lover & creative problems solver.</p>
+			<a href="#footer" class="btn">Contact Me</a>
+		</div>
 
-    <section class="section skills has-text-centered">
-        <div class="container is-narrow">
-            <div class="box">
-                <div class="content">
-                    <div class="columns is-centered">
-                        <div class="column">
-                            <img src="https://img.icons8.com/clouds/150/000000/design.png">
-                            <h1 class="title has-text-primary is-size-4 is-spaced">Web Design</h1>
-                            <h2 class="subtitle has-text-weight-light is-size-6">Eu tenho estudado este tópico para ter certeza que o cliente irá gostar do layout.</h2>
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">O que estou estudando:
-                            </p>
-                            <p class="text">Web & Mobile design, UI/UX</p>
+		<div class="scroll-down">
+			<a href="#about">
+				<i class="bx bx-mouse"></i>
+				<span>Scroll Down</span>
+				<i class="bx bxs-down-arrow-alt"></i>
+			</a>
+		</div>
+	</section>
+	<!-- About -->
+	<section class="about" id="about">
+		<div class="heading">
+			<h2>About</h2>
+			<span>Introduction</span>
+		</div>
+		<!-- About Content -->
+		<div class="about-container">
+			<div class="about-img">
+				<img src="img/about.jpg" alt="" />
+			</div>
+			<div class="about-text">
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis
+					beatae eius quae ab consequatur est perferendis dicta. Ad
+					repellendus perferendis minus sunt error eos dicta enim accusantium
+					ipsum veniam debitis quasi sint cum fugiat porro quam, blanditiis a
+					ratione quod!
+				</p>
+				<div class="information">
+					<!-- Box 1 -->
+					<div class="info-box">
+						<i class="bx bxs-user"></i>
+						<span>Leandro Viana</span>
+					</div>
+					<!-- Box 2 -->
+					<div class="info-box">
+						<i class="bx bxs-phone"></i>
+						<span>+55 (67) 99848 3963</span>
+					</div>
+					<!-- Box 3 -->
+					<div class="info-box">
+						<i class="bx bxs-envelope"></i>
+						<span>leandrovianacodes@gmail.com</span>
+					</div>
+				</div>
+				<a href="https://www.linkedin.com/in/leandro-viana-45a1a9168/" class="btn">Head to LinkedIn</a>
+			</div>
+		</div>
+	</section>
+	<!-- Skills -->
+	<section class="skills" id="skills">
+		<div class="heading">
+			<h2>Skills</h2>
+			<span>My Skills</span>
+		</div>
+		<!-- Skills Content -->
+		<div class="skills-container">
+			<div class="bars">
+				<!-- Box 1 -->
+				<div class="bars-box">
+					<h3>HTML</h3>
+					<span>93%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar html-bar"></div>
+				</div>
+				<!-- Box 2 -->
+				<div class="bars-box">
+					<h3>CSS</h3>
+					<span>94%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar css-bar"></div>
+				</div>
+				<!-- Box 3 -->
+				<div class="bars-box">
+					<h3>JavaScript</h3>
+					<span>94%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar js-bar"></div>
+				</div>
+			</div>
+			<!-- Box 4 -->
+			<div class="bars">
+				<div class="bars-box">
+					<h3>React</h3>
+					<span>60%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar react-bar"></div>
+				</div>
+				<!-- Box 5 -->
+				<div class="bars-box">
+					<h3>React native</h3>
+					<span>60%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar react-native-bar"></div>
+				</div>
+				<!-- Box 6 -->
+				<div class="bars-box">
+					<h3>Vue</h3>
+					<span>90%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar vue-bar"></div>
+				</div>
+			</div>
 
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">Ferramentas que utilizo:
-                            </p>
+			<div class="bars">
+				<!-- Box 7 -->
+				<div class="bars-box">
+					<h3>SASS</h3>
+					<span>85%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar sass-bar"></div>
+				</div>
+				<!-- Box 8 -->
+				<div class="bars-box">
+					<h3>Git</h3>
+					<span>95%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar git-bar"></div>
+				</div>
+				<!-- Box 9 -->
+				<div class="bars-box">
+					<h3>GraphQL</h3>
+					<span>75%</span>
+					<div class="light-bar"></div>
+					<div class="percent-bar gql-bar"></div>
+				</div>
+			</div>
 
-                            <li>Figma</li>
-                            <li>Gravit Designer</li>
-                            <li>Adobe XD</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Adobe Illustrator</li>
-                        </div>
-                        <div class="column">
-                            <img src="https://img.icons8.com/clouds/150/000000/code.png">
-                            <h1 class="title has-text-primary is-size-4 is-spaced">Desenvolvimento Web</h1>
-                            <h2 class="subtitle has-text-weight-light is-size-6">Sempre melhorando meus conhecimentos na área, buscando frameworks e bibliotecas novas.</h2>
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">Linguagens utilizadas:
-                            </p>
-                            <p class="text">HTML, JS, CSS & SASS</p>
+		</div>
+		<div class="skills-img">
+			<img src="img/skills.png" alt="" />
+		</div>
+		</div>
+	</section>
+	<!-- Services -->
+	<section class="services" id="services">
+		<div class="heading">
+			<h2>What I do</h2>
+			<span>Things I like to work on</span>
+		</div>
+		<div class="services-content">
+			<!-- Box 1 -->
+			<div class="services-box">
+				<i class="bx bx-code-block"></i>
+				<h3>Front-end <br />Engineering</h3>
+				<p>Design materials, structures and systems</p>
+			</div>
+			<!-- Box 2 -->
+			<div class="services-box">
+				<i class="bx bx-paint"></i>
+				<h3>UI <br />Development</h3>
+				<p>Using frameworks, patterns and code methodologies.</p>
+			</div>
+		</div>
+	</section>
+	<!-- Portfolio -->
+	<section class="portfolio" id="portfolio">
+		<div class="heading">
+			<h2>Portfolio</h2>
+			<span>My recent works</span>
+		</div>
+		<div class="portfolio-content">
+			<div class="portfolio-img">
+				<a target="_blank" href="http://fundodeinvestimentosbw.netlify.app/">
+					<div class="portfolio-text">
+						<p>
+							Fundo de Investimentos BW
+						</p>
+					</div>
+				</a>
+				<img src="img/p1.png" alt="" />
+			</div>
+			<div class="portfolio-img">
+				<a target="_blank" href="https://github.com/leandrocodes/mindfullness-app">
+					<div class="portfolio-text">
+						<p>
+							Mindfulness App
+						</p>
+					</div>
+				</a>
+				<img src="img/p2.png" alt="" />
+			</div>
+			<div class="portfolio-img">
+				<a target="_blank" href="https://github.com/leandrocodes/assoc-athletics-pwa">
+					<div class="portfolio-text">
+						<p>
+							AAA PRUU Athletics Associates
+						</p>
+					</div>
+				</a>
+				<img src="img/p3.png" alt="" />
+			</div>
+		</div>
+		<div class="portfolio-content">
+			<div class="portfolio-img">
+				<a target="_blank" href="https://github.com/leandrocodes/neuronio-perceptron-js">
+					<div class="portfolio-text">
+						<p>
+							Perceptron Neuron
+						</p>
+					</div>
+				</a>
+				<img src="img/p4.jpg" alt="" />
+			</div>
+			<div class="portfolio-img">
+				<a target="_blank" href="https://github.com/leandrocodes/vuejs-mysql">
+					<div class="portfolio-text">
+						<p>
+							Vue + Node.js + MySQL
+							<br>
+							Template
+						</p>
+					</div>
+				</a>
+				<img src="img/p5.png" alt="" />
+			</div>
+			<div class="portfolio-img">
+				<a target="_blank" href="https://github.com/leandrocodes/pdf-vuer">
+					<div class="portfolio-text">
+						<p>
+							Vue PDF reader component
+						</p>
+					</div>
+				</a>
+				<img src="img/p6.png" alt="" />
+			</div>
+		</div>
+	</section>
+	<!-- Footer -->
+	<div class="footer" id="footer">
+		<h2>Leandro Viana</h2>
+		<div class="footer-social">
+			<a href="https://www.facebook.com/leandro.vianamartins/" target="_blank"><i class="bx bxl-facebook"></i></a>
+			<a href="https://twitter.com/leandrovianam" target="_blank"><i class="bx bxl-twitter"></i></a>
+			<a href="https://www.instagram.com/leandrovianam/" target="_blank"><i class="bx bxl-instagram"></i></a>
+			<a href="https://www.linkedin.com/in/leandro-viana-45a1a9168/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+			<a href="https://github.com/leandrocodes" target="_blank"><i class="bx bxl-github"></i></a>
+		</div>
+	</div>
+	<!-- Copyright -->
+	<div class="copyright">
+		<p>&#169; Leandro Viana, all rights reserved.</p>
+	</div>
 
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">Ferramentas de Desenvolvimento:
-                            </p>
-
-                            <li>VSCode</li>
-                            <li>Codepen</li>
-                            <li>Git</li>
-                            <li>Github</li>
-                            <li>Bulma</li>
-                            <li>Bootstrap</li>
-                            <li>Spectre</li>
-                            <li>ZSH</li>
-
-                        </div>
-                        <div class="column">
-                            <img src="https://img.icons8.com/clouds/150/000000/books.png">
-                            <h1 class="title has-text-primary is-size-4 is-spaced">Estudos</h1>
-                            <h2 class="subtitle has-text-weight-light is-size-6"> Eu sempre estarei com um livro nas mãos ou vendo algum curso para manter a certeza de que estou me aprimorando.</h2>
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">Onde eu estudo:</p>
-
-                            <a href="https://cppp.ufms.br/" target="_blank" class="text has-text-dark">UFMS@CPPP</a>
-
-                            <p class="list-title is-size-6 has-text-primary has-text-weight-bold">Meus conteúdos favoritos:
-                            </p>
-
-                            <li>Codificação & Programação</li>
-                            <li>Engenharia de Software</li>
-                            <li>Interação Humano-Computador</li>
-                            <li>Teoria dos Grafos</li>
-                            <li>Estrutura de Dados</li>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section projects is-medium is-secondary has-text-centered">
-        <div class="container is-narrow">
-
-            <h1 class="title is-spaced has-text-darker is-size-3">Meus Projetos da Faculdade</h1>
-            <h2 class="subtitle is-size-5-has-text-dark desktop">Aqui estão meus projetos mais recentes. Quer colaborar com alguma ideia?
-                <a class="has-text-primary" href="mailto:leaxviana140@gmail.com">Mande um email!</a>
-            </h2>
-
-            <div class="project-grid columns is-multiline is-8 is-centered">
-                <div class="column has-text-centered is-full">
-                    <h1 class="title has-text-success is-3">Applets</h1>
-                </div>
-                <div class="card column is-one-third">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img src="https://img.icons8.com/dusk/128/000000/active-directory.png">
-                        </figure>
-                    </div>
-
-                    <div class="card-content">
-                        <div class="content">
-                            <h1 class="title is-4 has-text-primary">Binary Search Tree</h1>
-                            <p class="subtitle is-6 has-text-dark">
-                                Applet JavaScript
-                            </p>
-                            <p class="text has-text-dark has-text-justified">
-                                Apenas um simples applet que possibilita a visualização de uma estrutura de dados chamada árvore binária.
-                            </p>
-                            <a class="button is-success is-outlined is-rounded" href="bst/applet.html">Ver agora!</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card column is-one-third">
-                    <div class="card-image">
-                        <figure class="image">
-                            <img src="https://img.icons8.com/color/128/000000/txt.png">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h1 class="title is-4 has-text-primary">Compressor de arquivos txt</h1>
-                            <p class="subtitle is-6 has-text-dark">
-                                Aplicativo JavaScript
-                            </p>
-                            <p class="text has-text-dark has-text-justified">
-                                Compressor de arquivos .txt utilizando Árvore Heap e Algoritmo de Huffman em JavaScript.
-                            </p>
-                            <a class="button is-success is-outlined is-rounded" href="huff/">Testar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" class="footer">
-        <div class="content has-text-centered">
-            <a class="logo" href="/"><img src="img/logo.png" alt="Leandro Viana | Front-end Developer"></a>
-            <h1 class="title has-text-dark is-3">Entre em contato!</h1>
-        </div>
-
-        <div class="social-btns has-text-centered">
-            <a class="btn facebook" href="https://www.facebook.com/leandro.vianamartins" target="_blank"><i
-                    class="fa fa-facebook"></i></a>
-            <a class="btn twitter" href="https://twitter.com/leandrocodes" target="_blank"><i
-                    class="fa fa-twitter"></i></a>
-            <a class="btn google" href="mailto:leaxviana140@gmail.com" target="_blank"><i
-                    class="fa fa-envelope"></i></a>
-            <a class="btn instagram" href="https://www.instagram.com/leandro.codes" target="_blank"><i
-                    class="fa fa-instagram"></i></a>
-            <a class="btn github" href="https://github.com/leandrocodes" target="_blank"><i
-                    class="fa fa-github"></i></a>
-            <a class="btn whatsapp" href="https://api.whatsapp.com/send?phone=5567998394205&text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20pois%20estou%20interessado%20em%20seus%20trabalhos." target="_blank"><i class="fa fa-whatsapp"></i></a>
-        </div>
-
-    </footer>
-
-    <a href="#" id="scrollup">Scroll</a>
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="main.js"></script>
+	<!-- Link To JS -->
+	<script src="scripts.js"></script>
 </body>
 
 </html>
