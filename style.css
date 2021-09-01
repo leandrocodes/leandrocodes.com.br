@@ -97,11 +97,21 @@ header.shadow {
 	gap: 1rem;
 }
 .home-img {
-	order: 3;
+	order: 0;
 }
 .home-img img {
 	width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+	.home-text,
+	.about-container,
+	.skills-container {
+		padding: 1rem;
+		width: 100%;
+	}
+}
+
 .home-text span {
 	font-size: var(--medium-font);
 	font-weight: 500;
@@ -117,6 +127,12 @@ header.shadow {
 	font-size: var(--p-font);
 	font-weight: 400;
 	margin: 0.7rem 0 1rem;
+}
+.home-text .btn {
+	display: block;
+	width: 130px;
+	text-align: center;
+	margin-left: auto;
 }
 .social {
 	display: flex;
@@ -318,7 +334,7 @@ span {
 
 .portfolio-content {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 150px));
+	grid-template-columns: repeat(auto-fit, minmax(150px, 280px));
 	justify-content: center;
 	width: 100%;
 	gap: 1rem;
