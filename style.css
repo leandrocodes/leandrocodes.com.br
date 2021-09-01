@@ -11,10 +11,10 @@
 	font-family: 'Quicksand', sans-serif;
 }
 :root {
-	--main-color: #278ab0;
+	--main-color: #4864d6;
 	--bg-color: #eaeae0;
 	--text-color: #222831;
-	--hover: #1c4670;
+	--hover: #364788;
 
 	--big-font: 3.2rem;
 	--medium-font: 1.8rem;
@@ -55,7 +55,15 @@ header.shadow {
 	font-size: 1.1rem;
 	font-weight: 600;
 	color: var(--text-color);
+
+	display: flex;
+	align-items: center;
 }
+
+.logo img {
+	margin-right: 1rem;
+}
+
 .navbar {
 	display: flex;
 }
