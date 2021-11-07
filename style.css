@@ -107,7 +107,7 @@ header.shadow {
 	.home-text,
 	.about-container,
 	.skills-container {
-		padding: 1rem;
+		padding: 0 1rem;
 		width: 100%;
 	}
 }
