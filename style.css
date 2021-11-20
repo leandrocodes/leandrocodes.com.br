@@ -11,10 +11,10 @@
 	font-family: 'Quicksand', sans-serif;
 }
 :root {
-	--main-color: #4864d6;
+	--main-color: #5094aa;
 	--bg-color: #eaeae0;
 	--text-color: #222831;
-	--hover: #364788;
+	--hover: #87cae1;
 
 	--big-font: 3.2rem;
 	--medium-font: 1.8rem;
@@ -100,7 +100,7 @@ header.shadow {
 	order: 0;
 }
 .home-img img {
-	width: 100%;
+	width: 80%;
 }
 
 @media screen and (max-width: 768px) {
@@ -223,7 +223,7 @@ header.shadow {
 }
 .information .info-box .bx {
 	font-size: 22px;
-	color: #1dc690;
+	color: var(--main-color);
 }
 .information .info-box span {
 	font-weight: 400;
