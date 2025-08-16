@@ -1,5 +1,11 @@
 import { useRef, useState, useLayoutEffect, useCallback } from 'react';
-import { Menu, X, Linkedin, Github, Mail } from 'lucide-react';
+import {
+	List,
+	X,
+	LinkedinLogo,
+	GithubLogo,
+	Envelope,
+} from '@phosphor-icons/react';
 import { gsap } from 'gsap';
 
 const Header = () => {
@@ -23,15 +29,18 @@ const Header = () => {
 
 	const socialLinks = [
 		{
-			icon: Linkedin,
+			icon: LinkedinLogo,
 			href: 'https://linkedin.com/in/leandroviana',
 			label: 'LinkedIn',
 		},
-		{ icon: Github, href: 'https://github.com/leandroviana', label: 'GitHub' },
-		{ icon: Mail, href: 'mailto:leandro@example.com', label: 'Email' },
+		{
+			icon: GithubLogo,
+			href: 'https://github.com/leandroviana',
+			label: 'GitHub',
+		},
+		{ icon: Envelope, href: 'mailto:leandro@example.com', label: 'Email' },
 	];
 
-	// Header entrance animation
 	useLayoutEffect(() => {
 		const headerEl = headerRef.current;
 		const logoEl = logoRef.current;
@@ -41,13 +50,11 @@ const Header = () => {
 
 		if (!headerEl) return;
 
-		// Set initial states
 		gsap.set(headerEl, {
 			y: -100,
 			opacity: 0,
 		});
 
-		// Set initial states for individual elements
 		gsap.set(
 			[logoEl, desktopNavEl, desktopSocialEl, mobileButtonEl].filter(Boolean),
 			{
@@ -56,10 +63,8 @@ const Header = () => {
 			},
 		);
 
-		// Create entrance timeline
 		const entranceTl = gsap.timeline();
 
-		// Animate header container first
 		entranceTl.to(headerEl, {
 			y: 0,
 			opacity: 1,
@@ -67,7 +72,6 @@ const Header = () => {
 			ease: 'power3.out',
 		});
 
-		// Animate individual elements with stagger
 		entranceTl.to(
 			[logoEl, desktopNavEl, desktopSocialEl, mobileButtonEl].filter(Boolean),
 			{
@@ -80,7 +84,6 @@ const Header = () => {
 			'-=0.3',
 		);
 
-		// If desktop social links exist, animate them individually
 		if (desktopSocialEl) {
 			const socialLinks = desktopSocialEl.querySelectorAll('a');
 			gsap.set(socialLinks, { scale: 0, opacity: 0 });
@@ -97,7 +100,6 @@ const Header = () => {
 			);
 		}
 
-		// If desktop nav exists, animate nav items individually
 		if (desktopNavEl) {
 			const navLinks = desktopNavEl.querySelectorAll('a');
 			gsap.set(navLinks, { y: -10, opacity: 0 });
@@ -123,7 +125,6 @@ const Header = () => {
 		const mobileMenuEl = mobileMenuRef.current;
 		if (!mobileMenuEl) return 200;
 
-		// Temporarily make visible to measure
 		const wasVisible = mobileMenuEl.style.visibility;
 		const wasHeight = mobileMenuEl.style.height;
 
@@ -132,18 +133,16 @@ const Header = () => {
 
 		const contentHeight = mobileMenuEl.scrollHeight;
 
-		// Restore original styles
 		mobileMenuEl.style.visibility = wasVisible;
 		mobileMenuEl.style.height = wasHeight;
 
-		return contentHeight + 16; // Add some padding
+		return contentHeight + 16;
 	}, []);
 
 	const createTimeline = useCallback(() => {
 		const mobileMenuEl = mobileMenuRef.current;
 		if (!mobileMenuEl) return null;
 
-		// Set initial states
 		gsap.set(mobileMenuEl, {
 			height: 0,
 			opacity: 0,
@@ -157,7 +156,6 @@ const Header = () => {
 
 		const tl = gsap.timeline({ paused: true });
 
-		// Animate container
 		tl.to(mobileMenuEl, {
 			height: calculateMobileMenuHeight,
 			opacity: 1,
@@ -165,7 +163,6 @@ const Header = () => {
 			ease: 'power3.out',
 		});
 
-		// Animate menu items
 		tl.to(
 			menuItemsRef.current,
 			{
@@ -178,7 +175,6 @@ const Header = () => {
 			'-=0.2',
 		);
 
-		// Animate social items
 		tl.to(
 			socialItemsRef.current,
 			{
@@ -270,7 +266,6 @@ const Header = () => {
 		>
 			<nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
-					{/* Logo/Name - Left */}
 					<div className="flex-shrink-0">
 						<h1
 							ref={logoRef}
@@ -280,14 +275,13 @@ const Header = () => {
 						</h1>
 					</div>
 
-					{/* Navigation Links - Center (Desktop) */}
 					<div ref={desktopNavRef} className="hidden md:block">
 						<div className="ml-10 flex items-baseline space-x-8">
 							{navItems.map((item) => (
 								<a
 									key={item.name}
 									href={item.href}
-									className="text-white hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-200 hover:glass-strong rounded-lg"
+									className="text-white hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors duration-200 hover:glass-strong rounded-lg font-liter"
 								>
 									{item.name}
 								</a>
@@ -295,7 +289,6 @@ const Header = () => {
 						</div>
 					</div>
 
-					{/* Social Links - Right (Desktop) */}
 					<div
 						ref={desktopSocialRef}
 						className="hidden md:flex items-center space-x-4"
@@ -311,13 +304,13 @@ const Header = () => {
 							>
 								<social.icon
 									size={20}
+									weight="bold"
 									className="group-hover:scale-110 transition-transform duration-200"
 								/>
 							</a>
 						))}
 					</div>
 
-					{/* Mobile menu button */}
 					<div className="md:hidden">
 						<button
 							ref={mobileButtonRef}
@@ -347,7 +340,6 @@ const Header = () => {
 					</div>
 				</div>
 
-				{/* Mobile Navigation */}
 				<div
 					ref={mobileMenuRef}
 					className={`md:hidden overflow-hidden ${
@@ -362,7 +354,7 @@ const Header = () => {
 									key={item.name}
 									ref={setMenuItemRef(index)}
 									href={item.href}
-									className="text-white hover:text-orange-500 block px-3 py-3 text-base font-medium transition-colors duration-200 hover:glass-strong rounded-lg"
+									className="text-white hover:text-orange-500 block px-3 py-3 text-base font-medium transition-colors duration-200 hover:glass-strong rounded-lg font-liter"
 									onClick={handleMenuItemClick}
 								>
 									{item.name}
@@ -370,7 +362,6 @@ const Header = () => {
 							))}
 						</div>
 
-						{/* Mobile Social Links */}
 						<div className="flex items-center justify-center space-x-4 pt-6 mt-6 border-t border-gray-300/10">
 							{socialLinks.map((social, index) => (
 								<a
@@ -384,6 +375,7 @@ const Header = () => {
 								>
 									<social.icon
 										size={22}
+										weight="bold"
 										className="group-hover:scale-110 transition-transform duration-200"
 									/>
 								</a>
