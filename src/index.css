@@ -1,3 +1,135 @@
 @import "tailwindcss";
 
+@theme {
+  /* Override gray colors to use blue-gray background palette (#2D3142 & #4F5D75) */
+  --color-gray-50: #F7F8FA;
+  --color-gray-100: #E8EAED;
+  --color-gray-200: #D1D5DB;
+  --color-gray-300: #BFC0C0;  /* Light gray for secondary text/borders */
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #5A6B83;
+  --color-gray-700: #4F5D75;  /* Medium blue-gray for cards */
+  --color-gray-800: #3A4350;
+  --color-gray-900: #2D3142;  /* Primary dark background */
+  --color-gray-950: #1F242E;
+  
+  /* Override orange colors to use golden yellow palette (#FFC107 base) */
+  --color-orange-50: #FFFDF7;
+  --color-orange-100: #FFF9C4;
+  --color-orange-200: #FFF176;
+  --color-orange-300: #FFEB3B;
+  --color-orange-400: #FFD54F;
+  --color-orange-500: #FFC107;  /* Main primary color - golden yellow */
+  --color-orange-600: #FFB300;
+  --color-orange-700: #FF8F00;
+  --color-orange-800: #FF6F00;
+  --color-orange-900: #E65100;
+  --color-orange-950: #BF360C;
+  
+  /* Map blue to our primary golden yellow for consistency */
+  --color-blue-50: #FFFDF7;
+  --color-blue-100: #FFF9C4;
+  --color-blue-200: #FFF176;
+  --color-blue-300: #FFEB3B;
+  --color-blue-400: #FFD54F;
+  --color-blue-500: #FFC107;  /* Main primary color */
+  --color-blue-600: #FFB300;
+  --color-blue-700: #FF8F00;
+  --color-blue-800: #FF6F00;
+  --color-blue-900: #E65100;
+  --color-blue-950: #BF360C;
+  
+  /* Keep red as a secondary accent (slightly muted) */
+  --color-red-50: #FEF5F3;
+  --color-red-100: #FDE8E3;
+  --color-red-200: #FBD1C7;
+  --color-red-300: #F8B7A7;
+  --color-red-400: #F4967F;
+  --color-red-500: #EF7356;
+  --color-red-600: #E55534;
+  --color-red-700: #D13C1A;
+  --color-red-800: #B5310F;
+  --color-red-900: #9A2A0D;
+  --color-red-950: #7D220B;
+  
+  /* Pure white for primary text, light gray for secondary */
+  --color-white: #FFFFFF;  /* Primary text color */
+  --color-slate-50: #FFFFFF;
+  --color-slate-100: #F8F9FA;
+  --color-slate-200: #E9ECEF;
+  --color-slate-300: #DEE2E6;
+  --color-slate-400: #BFC0C0;  /* Secondary text color */
+  --color-slate-500: #ADB5BD;
+  --color-slate-600: #6C757D;
+  --color-slate-700: #495057;
+  --color-slate-800: #343A40;
+  --color-slate-900: #212529;
+  --color-slate-950: #0D1117;
+  
+  /* Glassmorphism gradients following golden triadic color theory */
+  --gradient-glass-primary: linear-gradient(135deg, #2D3142 0%, #4F5D75 50%, #3A4350 100%);
+  --gradient-glass-warm: linear-gradient(135deg, #2D3142 0%, #3A4350 30%, #4A4632 60%, #3A4350 100%);
+  --gradient-glass-accent: linear-gradient(135deg, #FFC107 0%, #FFB300 50%, #FF8F00 100%);
+  --gradient-glass-subtle: linear-gradient(135deg, #4F5D75 0%, #5A6B83 30%, #6B6B52 70%, #4F5D75 100%);
+  --gradient-glass-golden: linear-gradient(135deg, #FF8F00 0%, #FFC107 30%, #FFB300 70%, #4F5D75 100%);
+  --gradient-glass-cool: linear-gradient(135deg, #2D3142 0%, #4F5D75 25%, #5A6B52 50%, #4F5D75 75%, #2D3142 100%);
+  
+  /* Enhanced glassmorphism shadows */
+  --shadow-glass: 0 8px 32px 0 rgba(45, 49, 66, 0.37);
+  --shadow-glass-lg: 0 16px 48px 0 rgba(45, 49, 66, 0.45);
+  --shadow-inset-glass: inset 0 2px 4px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Glassmorphism utility classes */
+@layer utilities {
+  .glass {
+    background: rgba(79, 93, 117, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(191, 192, 192, 0.1);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-strong {
+    background: rgba(79, 93, 117, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(191, 192, 192, 0.15);
+    box-shadow: var(--shadow-glass-lg);
+  }
+  
+  .glass-card {
+    background: rgba(79, 93, 117, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(191, 192, 192, 0.12);
+    box-shadow: var(--shadow-glass), var(--shadow-inset-glass);
+  }
+  
+  .bg-gradient-glass-primary {
+    background: var(--gradient-glass-primary);
+  }
+  
+  .bg-gradient-glass-warm {
+    background: var(--gradient-glass-warm);
+  }
+  
+  .bg-gradient-glass-accent {
+    background: var(--gradient-glass-accent);
+  }
+  
+  .bg-gradient-glass-subtle {
+    background: var(--gradient-glass-subtle);
+  }
+  
+  .bg-gradient-glass-golden {
+    background: var(--gradient-glass-golden);
+  }
+  
+  .bg-gradient-glass-cool {
+    background: var(--gradient-glass-cool);
+  }
+}
+
 /* Custom styles can go here */
