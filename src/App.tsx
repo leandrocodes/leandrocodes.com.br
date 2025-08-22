@@ -1,83 +1,193 @@
 import Header from './components/Header';
-import './App.css';
+import Home from './components/Home';
+import ScrollReveal from './components/ScrollReveal';
 
 function App() {
 	return (
 		<div className="min-h-screen bg-gradient-glass-primary relative overflow-hidden">
-			{/* Background gradient overlays for depth */}
 			<div className="absolute inset-0 bg-gradient-glass-cool opacity-20 animate-pulse"></div>
 			<div className="absolute inset-0 bg-gradient-glass-warm opacity-15"></div>
 
 			{/* Header */}
 			<Header />
 
-			{/* Main content */}
-			<main className="relative z-10">
-				{/* Hero Section */}
-				<section
-					id="home"
-					className="min-h-screen flex flex-col items-center justify-center px-4"
-				>
-					<div className="text-center max-w-4xl mx-auto">
-						<h1 className="text-5xl md:text-7xl font-bold text-orange-500 mb-6 drop-shadow-lg">
-							Leandro Viana
-						</h1>
-						<h2 className="text-2xl md:text-3xl text-white mb-8 font-light">
-							Full Stack Developer
-						</h2>
-						<div className="glass-card p-8 rounded-2xl max-w-2xl mx-auto">
-							<p className="text-white text-lg leading-relaxed mb-6">
-								Creating beautiful, functional, and user-centered digital
-								experiences with modern technologies.
-							</p>
-							<button
-								type="button"
-								className="bg-gradient-glass-accent text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg glass border-0"
+			{/* Home Section */}
+			<Home />
+
+			{/* About Section with ScrollReveal */}
+			<section
+				id="about"
+				className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+			>
+				<div className="max-w-4xl mx-auto text-center space-y-16">
+					<ScrollReveal
+						as="h2"
+						containerClassName="text-center"
+						textClassName="text-white font-bold"
+						baseOpacity={0.2}
+						baseRotation={2}
+						enableBlur={true}
+						blurStrength={3}
+					>
+						About Me
+					</ScrollReveal>
+
+					<ScrollReveal
+						containerClassName="text-center max-w-3xl mx-auto"
+						textClassName="text-gray-300 font-normal text-[clamp(1.2rem,2.5vw,1.8rem)]"
+						baseOpacity={0.1}
+						baseRotation={1}
+						enableBlur={true}
+						blurStrength={2}
+					>
+						I'm a passionate Frontend Developer with expertise in React,
+						TypeScript, and modern web technologies. I love creating beautiful,
+						interactive user experiences that make a difference.
+					</ScrollReveal>
+				</div>
+			</section>
+
+			{/* Skills Section */}
+			<section
+				id="skills"
+				className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+			>
+				<div className="max-w-6xl mx-auto space-y-20">
+					<ScrollReveal
+						as="h2"
+						containerClassName="text-center"
+						textClassName="text-orange-500 font-bold"
+						baseOpacity={0.2}
+						baseRotation={-2}
+						enableBlur={true}
+						blurStrength={4}
+					>
+						My Skills & Expertise
+					</ScrollReveal>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+						<div>
+							<ScrollReveal
+								as="h3"
+								containerClassName="mb-8"
+								textClassName="text-white font-semibold text-[clamp(1.4rem,3vw,2.2rem)]"
+								baseOpacity={0.15}
+								baseRotation={1.5}
+								enableBlur={true}
 							>
-								View My Work
-							</button>
+								Frontend Technologies
+							</ScrollReveal>
+
+							<ScrollReveal
+								containerClassName="space-y-4"
+								textClassName="text-gray-300 font-normal text-[clamp(1rem,2vw,1.4rem)]"
+								baseOpacity={0.1}
+								baseRotation={0.5}
+								enableBlur={true}
+								blurStrength={2}
+							>
+								React, TypeScript, Next.js, Tailwind CSS, GSAP, Three.js, and
+								modern JavaScript frameworks that bring ideas to life.
+							</ScrollReveal>
+						</div>
+
+						<div>
+							<ScrollReveal
+								as="h3"
+								containerClassName="mb-8"
+								textClassName="text-white font-semibold text-[clamp(1.4rem,3vw,2.2rem)]"
+								baseOpacity={0.15}
+								baseRotation={-1.5}
+								enableBlur={true}
+							>
+								Design & Animation
+							</ScrollReveal>
+
+							<ScrollReveal
+								containerClassName="space-y-4"
+								textClassName="text-gray-300 font-normal text-[clamp(1rem,2vw,1.4rem)]"
+								baseOpacity={0.1}
+								baseRotation={-0.5}
+								enableBlur={true}
+								blurStrength={2}
+							>
+								Creating smooth animations, responsive designs, and intuitive
+								user interfaces that engage and delight users.
+							</ScrollReveal>
 						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				{/* About Section */}
-				<section
-					id="about"
-					className="min-h-screen flex items-center justify-center px-4 py-20"
-				>
-					<div className="max-w-4xl mx-auto glass-card p-12 rounded-2xl">
-						<h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">
-							About Me
-						</h2>
-						<p className="text-white text-lg leading-relaxed text-center">
-							Passionate developer with expertise in modern web technologies. I
-							love creating innovative solutions and bringing ideas to life
-							through code.
-						</p>
+			{/* Projects Section */}
+			<section
+				id="projects"
+				className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+			>
+				<div className="max-w-4xl mx-auto text-center space-y-16">
+					<ScrollReveal
+						as="h2"
+						containerClassName="text-center"
+						textClassName="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 font-bold"
+						baseOpacity={0.2}
+						baseRotation={3}
+						enableBlur={true}
+						blurStrength={5}
+					>
+						Featured Projects
+					</ScrollReveal>
+
+					<ScrollReveal
+						containerClassName="text-center"
+						textClassName="text-gray-300 font-normal text-[clamp(1.2rem,2.5vw,1.8rem)]"
+						baseOpacity={0.1}
+						baseRotation={-1}
+						enableBlur={true}
+						blurStrength={3}
+					>
+						Here are some of the projects I've worked on, showcasing my skills
+						in modern web development and creative problem-solving.
+					</ScrollReveal>
+				</div>
+			</section>
+
+			{/* Contact Section */}
+			<section
+				id="contact"
+				className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8"
+			>
+				<div className="max-w-4xl mx-auto text-center space-y-16">
+					<ScrollReveal
+						as="h2"
+						containerClassName="text-center"
+						textClassName="text-white font-bold"
+						baseOpacity={0.2}
+						baseRotation={-2}
+						enableBlur={true}
+						blurStrength={4}
+					>
+						Let's Work Together
+					</ScrollReveal>
+
+					<ScrollReveal
+						containerClassName="text-center"
+						textClassName="text-gray-300 font-normal text-[clamp(1.2rem,2.5vw,1.8rem)]"
+						baseOpacity={0.1}
+						baseRotation={1}
+						enableBlur={true}
+						blurStrength={2}
+					>
+						Ready to bring your ideas to life? Let's create something amazing
+						together.
+					</ScrollReveal>
+
+					<div className="pt-8">
+						<button className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-medium text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25">
+							Get In Touch
+						</button>
 					</div>
-				</section>
-
-				{/* Work Section */}
-				<section
-					id="work"
-					className="min-h-screen flex items-center justify-center px-4 py-20"
-				>
-					<div className="max-w-4xl mx-auto glass-card p-12 rounded-2xl">
-						<h2 className="text-4xl font-bold text-orange-500 mb-8 text-center">
-							My Work
-						</h2>
-						<p className="text-white text-lg leading-relaxed text-center">
-							Here are some of my featured projects and contributions. Each
-							project represents a unique challenge and solution.
-						</p>
-					</div>
-				</section>
-			</main>
-
-			{/* Floating glassmorphism elements for depth */}
-			<div className="absolute top-20 left-10 w-32 h-32 glass rounded-full opacity-20 animate-bounce"></div>
-			<div className="absolute bottom-20 right-16 w-24 h-24 glass rounded-full opacity-15 animate-pulse"></div>
-			<div className="absolute top-1/3 right-10 w-16 h-16 glass rounded-full opacity-25"></div>
+				</div>
+			</section>
 		</div>
 	);
 }

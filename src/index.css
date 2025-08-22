@@ -77,6 +77,27 @@
   
   --gradient-glass-primary: linear-gradient(135deg, #2D3142 0%, #4F5D75 50%, #3A4350 100%);
   --gradient-glass-warm: linear-gradient(135deg, #2D3142 0%, #3A4350 30%, #4A4632 60%, #3A4350 100%);
+
+@keyframes scan-diagonal {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(500%) translateY(500%) rotate(45deg); }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+.animate-scan-diagonal {
+  animation: scan-diagonal 4s linear infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s infinite;
+}
   --gradient-glass-accent: linear-gradient(135deg, #FFC107 0%, #FFB300 50%, #FF8F00 100%);
   --gradient-glass-subtle: linear-gradient(135deg, #4F5D75 0%, #5A6B83 30%, #6B6B52 70%, #4F5D75 100%);
   --gradient-glass-golden: linear-gradient(135deg, #FF8F00 0%, #FFC107 30%, #FFB300 70%, #4F5D75 100%);

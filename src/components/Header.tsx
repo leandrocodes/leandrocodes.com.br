@@ -1,11 +1,5 @@
 import { useRef, useState, useLayoutEffect, useCallback } from 'react';
-import {
-	List,
-	X,
-	LinkedinLogo,
-	GithubLogo,
-	Envelope,
-} from '@phosphor-icons/react';
+import { LinkedinLogo, GithubLogo, Envelope } from '@phosphor-icons/react';
 import { gsap } from 'gsap';
 
 const Header = () => {
