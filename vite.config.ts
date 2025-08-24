@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/', // Como você tem domínio personalizado (leandrocodes.com)
+  base: '/',
   build: {
     outDir: 'dist',
   }
