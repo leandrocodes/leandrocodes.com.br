@@ -8,5 +8,15 @@ export default defineConfig({
   base: '/',
   build: {
     outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
+  },
+  esbuild: {
+    target: 'es2015'
   }
 })
