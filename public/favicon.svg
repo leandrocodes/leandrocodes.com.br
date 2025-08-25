@@ -1,0 +1,64 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Cyberpunk glow gradient -->
+    <linearGradient id="primaryGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffc107;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffb300;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff8f00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3142;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4f5d75;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3a4350;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Scan line pattern -->
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="32" height="2">
+      <rect width="32" height="1" fill="rgba(255, 193, 7, 0.1)"/>
+      <rect y="1" width="32" height="1" fill="transparent"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="32" height="32" rx="4" fill="url(#bgGradient)"/>
+  
+  <!-- Scan lines overlay -->
+  <rect width="32" height="32" rx="4" fill="url(#scanlines)" opacity="0.3"/>
+  
+  <!-- Letter L -->
+  <g filter="url(#glow)">
+    <path d="M6 6 L6 20 L6 22 L8 22 L14 22 L14 20 L8 20 L8 6 Z" 
+          fill="url(#primaryGlow)" 
+          stroke="#ffc107" 
+          stroke-width="0.5"/>
+  </g>
+  
+  <!-- Letter V -->
+  <g filter="url(#glow)">
+    <path d="M18 6 L20.5 6 L23 16 L25.5 6 L28 6 L24.5 22 L21.5 22 Z" 
+          fill="url(#primaryGlow)" 
+          stroke="#ffc107" 
+          stroke-width="0.5"/>
+  </g>
+  
+  <!-- Cyberpunk accent lines -->
+  <line x1="2" y1="28" x2="30" y2="28" stroke="#ffc107" stroke-width="0.5" opacity="0.6"/>
+  <line x1="2" y1="4" x2="30" y2="4" stroke="#ffc107" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Corner accents -->
+  <rect x="2" y="2" width="3" height="1" fill="#ffc107" opacity="0.8"/>
+  <rect x="27" y="2" width="3" height="1" fill="#ffc107" opacity="0.8"/>
+  <rect x="2" y="29" width="3" height="1" fill="#ffc107" opacity="0.8"/>
+  <rect x="27" y="29" width="3" height="1" fill="#ffc107" opacity="0.8"/>
+</svg>
